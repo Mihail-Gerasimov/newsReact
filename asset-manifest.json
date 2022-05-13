@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/newsReact/static/css/main.d6c4486f.css",
+    "main.js": "/newsReact/static/js/main.d091b4f8.js",
+    "static/js/787.e5372b0f.chunk.js": "/newsReact/static/js/787.e5372b0f.chunk.js",
+    "static/media/grisha_s_ytra.png": "/newsReact/static/media/grisha_s_ytra.069ef384be574fffc13b.png",
+    "static/media/404.jpg": "/newsReact/static/media/404.adb7f1593d69d5bd10f0.jpg",
+    "static/media/spaceLogo.png": "/newsReact/static/media/spaceLogo.74ba0e833a82ad40319c.png",
+    "static/media/logo.svg": "/newsReact/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/newsReact/index.html",
+    "main.d6c4486f.css.map": "/newsReact/static/css/main.d6c4486f.css.map",
+    "main.d091b4f8.js.map": "/newsReact/static/js/main.d091b4f8.js.map",
+    "787.e5372b0f.chunk.js.map": "/newsReact/static/js/787.e5372b0f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6c4486f.css",
+    "static/js/main.d091b4f8.js"
+  ]
+}
