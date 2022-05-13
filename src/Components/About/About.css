@@ -1,0 +1,80 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.cardImg {
+  border-radius: 5px;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.card-body h3 span {
+  font-weight: 700;
+  transition: .3s;
+}
+
+.card-body h3 span:hover {
+  cursor: pointer;
+  transition: .3s;
+  color: #4aa7ff;
+  text-decoration: underline;
+}
+
+.about-main {
+  padding: 10px;
+  background-color: #c4c4c4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.button {
+  background-color: #4aa7ff;
+  border: 3px solid #4aa7ff;
+
+  margin-top: 30px;
+  padding: 8px 40px;
+  display: inline-block;
+
+  line-height: 1.5;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #80c1ff;
+}
+
+.button:active {
+  background-color: #2cbcff;
+}
+
+.button:focus {
+  outline: none;
+  border: 3px solid #4aa7ff;
+  box-shadow: 0px 0px 10px 0 #2cbcff;
+}

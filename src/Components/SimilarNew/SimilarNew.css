@@ -1,0 +1,39 @@
+.similarWrapper {
+    margin-top: 10px;
+}
+
+.buttonSim {
+	background-color: #4aa7ff;
+	border: 3px solid #4aa7ff;
+
+    margin-top: 30px;
+    padding: 8px 40px;
+    display: inline-block;
+
+	line-height: 1.5;
+	font-size: 20px;
+	color: #FFF;
+	font-weight: 700;
+	text-decoration: none;
+	transition: background-color 0.2s ease-in;
+
+    border-radius: 20px;
+
+	cursor: pointer;
+
+    width: 300px;
+}
+
+.buttonSim:hover {
+	background-color: #80c1ff;
+}
+
+.buttonSim:active {
+	background-color: #2cbcff;
+}
+
+.buttonSim:focus {
+	outline: none;
+	border: 3px solid #4aa7ff;
+	box-shadow: 0px 0px 10px 0 #2cbcff;
+}
