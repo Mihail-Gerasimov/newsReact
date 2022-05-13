@@ -26,10 +26,10 @@ const NewPage = () => {
 
   useEffect(() => {
     if (localStorage.getItem("bookmarks")) {
-      const exist = JSON.parse(localStorage.getItem("bookmarksId")).indexOf(newEntity.id) != -1;
+      const exist = JSON.parse(localStorage.getItem("bookmarksId")).indexOf(Number(params.id)) != -1;
       setIsPinned(exist);
     }
-  }, []);
+  }, [params]);
 
   let temp = [];
   let tempId = [];
@@ -53,6 +53,7 @@ const NewPage = () => {
       localStorage.setItem("bookmarks", JSON.stringify(temp));
       localStorage.setItem("bookmarksId", JSON.stringify(tempId));
     }
+    setIsPinned(!isPinned);
   };
 
   return (
