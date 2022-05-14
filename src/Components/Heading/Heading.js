@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./Header.css";
-import "./HeaderMedia.css";
+import "./Heading.css";
+import "./HeadingMedia.css";
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 import logo from "./img/spaceLogo.png";
 
-class Header extends Component {
+class Heading extends Component {
   render() {
     return (
       <>
@@ -40,4 +40,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default Heading;

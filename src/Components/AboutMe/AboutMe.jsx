@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import "./About.css";
-import "./AboutMedia.css";
-import grisha from "./grisha_s_ytra.png";
+import "./AboutMe.css";
+import "./AboutMeMedia.css";
+import floweR from "./flower.jpg";
 
-class About extends Component {
+class AboutMe extends Component {
     render() {
         return (
             <>
                 <div className="container">
                     <div className='about-main'>
                         <img
-                            src={grisha}
+                            src={floweR}
                             className="cardImg"
                             alt="profileGit"
                         />
@@ -20,7 +20,7 @@ class About extends Component {
                                 студент группы РПИС-91: <br />
                                 <br /> <span>Герасимов Михаил Васильевич</span>
                             </h3>
-                            <a href="https://github.com/iceb34r" className="button" target="blank">
+                            <a href="https://github.com/Mihail-Gerasimov" className="button" target="blank">
                                 Link ...GitHub
                             </a>
                         </div>
@@ -31,4 +31,4 @@ class About extends Component {
     }
 }
 
-export default About;
+export default AboutMe;

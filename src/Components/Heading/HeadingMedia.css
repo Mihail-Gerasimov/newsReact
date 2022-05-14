@@ -21,6 +21,12 @@
 
 /* Medium Display */
 @media (max-width: 960px) {
+
+
+  .newWrapper img {
+    max-width: 290px;
+  }
+
   .headerLinks {
     font-size: 24px;
   }
@@ -45,9 +51,15 @@
 
 /* Small Display */
 @media (max-width: 720px) {
+
+  .newWrapper img {
+    max-width: 200px;
+  }
+
   .headerLinks {
     margin-left: 20px;
-    font-size: 20px;
+    margin-left: 15px;
+    font-size: 13px;
   }
 
   .contentContainer {

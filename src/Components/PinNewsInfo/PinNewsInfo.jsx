@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import axios from "axios";
-import New from "../New/New";
-import "./PinNew.css";
+import New from "../NewInfo/NewInfo";
+import "./PinNewsInfo.css";
 import Pagination from "../Pagination/Pagination";
 
 const PinNew = () => {
@@ -33,12 +33,12 @@ const PinNew = () => {
           ))}
         </div>
         {pinnedNews.length > newsPerPage &&
-        <Pagination 
-            newsPerPage = {newsPerPage}
-            totalNews = {pinnedNews.length}
-            paginate = {paginate}
-            currentPage = {currentPage}
-        /> 
+          <Pagination
+            newsPerPage={newsPerPage}
+            totalNews={pinnedNews.length}
+            paginate={paginate}
+            currentPage={currentPage}
+          />
         }
       </div>
     );
@@ -46,7 +46,7 @@ const PinNew = () => {
     return (
       <>
         <h1 className="emptyPinnedNews">
-          Список ваших закрепленных новостей пуст!
+          Вы не добавляли никаких новостей!...
         </h1>
       </>
     );

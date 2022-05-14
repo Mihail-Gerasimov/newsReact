@@ -31,8 +31,8 @@
 
   .button {
     margin-top: 21px;
-    padding: 4px 25px;
-    font-size: 13px;
+    padding: 7px 25px;
+    font-size: 15px;
   }
 
   .imgNew {
@@ -40,8 +40,8 @@
     height: 100%;
   }
 
-  .source{
-      font-size: 12px;
+  .source {
+    font-size: 12px;
   }
 }
 

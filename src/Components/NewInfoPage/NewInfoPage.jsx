@@ -1,8 +1,9 @@
 import React, { Component, useEffect, useState } from "react";
 import axios from "axios";
-import New from "../New/New";
-import "./News.css";
-import "./NewsMedia.css";
+import New from "../NewInfo/NewInfo";
+import "./NewInfoPage.css";
+import "./NewInfoPageMedia.css";
+import lupa from "./lupa.png";
 
 function News() {
   const [news, setNews] = useState([]);
@@ -114,7 +115,7 @@ function News() {
               setModeEntity("find");
             }}
           >
-            <svg
+            {/* <svg
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -131,7 +132,8 @@ function News() {
                   fill="#392B4B"
                 />
               </g>
-            </svg>
+            </svg> */}
+            <img src={lupa} alt="" className="lupaPA" />
           </button>
         </div>
         <select
