@@ -1,3 +1,21 @@
+.notFoundNews {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+  padding: 150px 0;
+}
+
+/* .loadGif {
+  width: 100%;
+  max-width: 100px;
+
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+} */
+
 .finderStyle {
   display: flex;
   justify-content: center;

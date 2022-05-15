@@ -47,7 +47,6 @@ const NewPage = () => {
       localStorage.setItem("bookmarks", JSON.stringify(temp));
       localStorage.setItem("bookmarksId", JSON.stringify(tempId));
     } else {
-      // const newArr = temp.filter(item => item.id !== newEntity.id);
       temp.splice(tempId.indexOf(Number(id)), 1);
       tempId.splice(tempId.indexOf(Number(id)), 1);
       localStorage.setItem("bookmarks", JSON.stringify(temp));

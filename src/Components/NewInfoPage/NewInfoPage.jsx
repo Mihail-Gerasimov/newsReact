@@ -4,6 +4,8 @@ import New from "../NewInfo/NewInfo";
 import "./NewInfoPage.css";
 import "./NewInfoPageMedia.css";
 import lupa from "./lupa.png";
+import LoadingIndicator  from "../LoadingIndicator/LoadingIndicator";
+import { trackPromise } from 'react-promise-tracker';
 
 function News() {
   const [news, setNews] = useState([]);
@@ -14,6 +16,7 @@ function News() {
   const [currentPage, setCurrentPage] = useState(1);
   const [fetching, setFetching] = useState(true);
   const [sortDesc, setSortDesc] = useState(false);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     if (fetching) {
@@ -24,13 +27,12 @@ function News() {
         case "sort":
           handleSort();
           break;
-
         default:
           handleAllNews();
           break;
       }
     }
-  }, [fetching, modeEntity]);
+  }, [fetching, modeEntity, isLoading]);
 
   useEffect(() => {
     document.addEventListener("scroll", scrollHandler);
@@ -42,7 +44,7 @@ function News() {
   const scrollHandler = (e) => {
     if (
       e.target.documentElement.scrollHeight -
-      (e.target.documentElement.scrollTop + window.innerHeight) <
+        (e.target.documentElement.scrollTop + window.innerHeight) <
       100
     ) {
       setFetching(true);
@@ -50,6 +52,7 @@ function News() {
   };
 
   const handleAllNews = () => {
+    trackPromise(
     axios
       .get(
         `https://api.spaceflightnewsapi.net/v3/articles?_start=${currentPage}`
@@ -58,7 +61,9 @@ function News() {
         setNews([...news, ...res.data]);
         setCurrentPage((prevState) => prevState + 10);
       })
-      .finally(() => setFetching(false));
+      .finally(() => setFetching(false)));
+
+    setLoading(false);
   };
 
   const handleSort = () => {
@@ -71,26 +76,32 @@ function News() {
         setCurrentPage((prevState) => prevState + 10);
       })
       .finally(() => setFetching(false));
+
+    setLoading(false);
   };
 
   const handleFinder = () => {
+    trackPromise(
     axios
       .get(
         `https://api.spaceflightnewsapi.net/v3/articles?` +
-        `${selectChanged}_contains=${searchInput}` +
-        `&_start=${currentPage}`
+          `${selectChanged}_contains=${searchInput}` +
+          `&_start=${currentPage}`
       )
       .then((res) => {
         setNews([...news, ...res.data]);
         setCurrentPage((prevState) => prevState + 10);
       })
-      .finally(() => setFetching(false));
+      .finally(() => setFetching(false)));
+
+    setLoading(false);
   };
 
   const setupSort = () => {
     setNews([]);
     setFetching(true);
     setCurrentPage(1);
+    setLoading(true);
     setSortDesc(!sortDesc);
     let sortColumn = sortDesc ? "" : "sort";
     setModeEntity(sortColumn);
@@ -99,6 +110,7 @@ function News() {
   const setupFind = () => {
     setNews([]);
     setFetching(true);
+    setLoading(true);
     setCurrentPage(1);
     setModeEntity("find");
   };
@@ -134,11 +146,17 @@ function News() {
         </div>
       </div>
 
-      <div>
-        {news.map((news) => (
-          <New news={news} key={news.id} />
-        ))}
-      </div>
+      <LoadingIndicator/>
+
+      {news.length != 0 ? (
+        <div>
+          {news.map((news) => (
+            <New news={news} key={news.id} />
+          ))}
+        </div>
+      ) : (
+        <h1 className="notFoundNews">Новостей нет...</h1>
+      )}
     </div>
   );
 }
